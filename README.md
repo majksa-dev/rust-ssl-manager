@@ -1,8 +1,8 @@
-# rust-lib
+# SSL manager
 
-rust-lib description
+🦀 SSL manager library written in Rust.
 
-[Crate API Documentation](https://majksa-dev.github.io/rust-lib/)
+[Crate API Documentation](https://majksa-dev.github.io/rust-ssl-manager/)
 
 **Table of contents**
 
@@ -10,15 +10,15 @@ rust-lib description
 
 ### Installation
 
-To use `rust-lib`, add the following to your Cargo.toml:
+To use `ssl-manager`, add the following to your Cargo.toml:
 
 <!-- x-release-please-start-version -->
 
 ```toml
 [dependencies]
-rust-lib = { tag = "0.0.1", git = "https://github.com/majksa-dev/rust-lib" }
+ssl-manager = { tag = "0.0.1", git = "https://github.com/majksa-dev/rust-ssl-manager" }
 ```
 
-or simply run `cargo add --git https://github.com/majksa-dev/rust-lib --tag 0.0.1`
+or simply run `cargo add --git https://github.com/majksa-dev/rust-ssl-manager --tag 0.0.1`
 
 <!-- x-release-please-end -->

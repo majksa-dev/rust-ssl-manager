@@ -480,20 +480,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "adad44e29e4c806119491a7f06f03de4d1af22c3a680dd47f1e6e179439d1f56"
 
 [[package]]
-name = "rust-lib"
-version = "0.0.1"
-dependencies = [
- "chrono",
- "derive_more",
- "essentials",
- "futures-util",
- "rand",
- "serde",
- "serde_json",
- "slab",
-]
-
-[[package]]
 name = "rustc-demangle"
 version = "0.1.24"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -570,6 +556,20 @@ name = "smallvec"
 version = "1.13.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3c5e1a9a646d36c3599cd173a41282daf47c44583ad367b8e6837255952e5c67"
+
+[[package]]
+name = "ssl-manager"
+version = "0.0.1"
+dependencies = [
+ "chrono",
+ "derive_more",
+ "essentials",
+ "futures-util",
+ "rand",
+ "serde",
+ "serde_json",
+ "slab",
+]
 
 [[package]]
 name = "syn"
