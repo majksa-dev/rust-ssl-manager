@@ -1,7 +1,7 @@
-#[cfg(feature = "acme")]
+#[cfg(all(feature = "acme", not(feature = "cloudflare")))]
 mod acme;
 
-#[cfg(feature = "acme")]
+#[cfg(all(feature = "acme", not(feature = "cloudflare")))]
 pub use acme::run;
 
 #[cfg(feature = "cloudflare")]
