@@ -11,4 +11,4 @@ jobs:
     secrets:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
     with:
-      features: '["full"]'
+      features: '["dns-cloudflare","cloudflare"]'

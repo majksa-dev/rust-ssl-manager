@@ -5,15 +5,9 @@ use essentials::{info, warn};
 use instant_acme::{AuthorizationStatus, ChallengeType, Identifier, Order};
 use tokio::time::sleep;
 
-use crate::dns::Clients;
+use crate::{certificate::CertificateResult, dns::Clients, Certificate};
 
-use super::{ready::Ready, Certificate};
-
-#[derive(Debug)]
-pub enum CertificateResult {
-    Refreshed(String),
-    New(Certificate),
-}
+use super::ready::Ready;
 
 pub(super) trait CreateChallenges {
     async fn create_challenges(

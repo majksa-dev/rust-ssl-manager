@@ -1,4 +1,4 @@
-#[cfg(feature = "cloudflare")]
+#[cfg(feature = "dns-cloudflare")]
 pub mod cloudflare;
 pub mod manual;
 
@@ -12,7 +12,7 @@ use utils::{check_txt_value, RFindNth};
 const DNS_RECORD_NAME: &str = "_acme-challenge";
 
 pub enum Clients {
-    #[cfg(feature = "cloudflare")]
+    #[cfg(feature = "dns-cloudflare")]
     Cloudflare(cloudflare::Client),
     Manual(manual::Client),
 }
@@ -45,7 +45,7 @@ impl Clients {
             let (domain, name, value) = (domain_name, name.clone(), value.clone());
             use Clients::*;
             match self {
-                #[cfg(feature = "cloudflare")]
+                #[cfg(feature = "dns-cloudflare")]
                 Cloudflare(client) => client.create_record(domain, name, value).await?,
                 Manual(client) => client.create_record(domain, name, value).await?,
             }
@@ -59,7 +59,7 @@ impl Clients {
     pub async fn delete_record(&self, domain_id: String, dns_id: String) -> Result<()> {
         use Clients::*;
         match self {
-            #[cfg(feature = "cloudflare")]
+            #[cfg(feature = "dns-cloudflare")]
             Cloudflare(client) => client.delete_record(domain_id, dns_id).await,
             Manual(client) => client.delete_record(domain_id, dns_id).await,
         }
@@ -69,7 +69,7 @@ impl Clients {
         manual::Client::new().wrap()
     }
 
-    #[cfg(feature = "cloudflare")]
+    #[cfg(feature = "dns-cloudflare")]
     pub fn cloudflare(token: String) -> Result<Self> {
         let client = cloudflare::Client::new(token)?;
         Ok(client.wrap())

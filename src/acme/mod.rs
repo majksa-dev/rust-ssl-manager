@@ -1,9 +1,5 @@
-mod certificate;
 mod challenges;
 mod ready;
-
-pub use certificate::Certificate;
-pub use challenges::CertificateResult;
 
 use anyhow::{bail, Result};
 use challenges::CreateChallenges;
@@ -14,7 +10,10 @@ use std::{
     path::Path,
 };
 
-use crate::dns::{self};
+use crate::{
+    dns::{self},
+    CertificateResult,
+};
 
 pub struct AcmeClient {
     account: Account,

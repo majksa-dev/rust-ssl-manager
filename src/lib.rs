@@ -9,7 +9,10 @@
 
 #[cfg(feature = "acme")]
 pub mod acme;
+mod certificate;
 #[cfg(feature = "cloudflare")]
 pub mod cloudflare;
 #[cfg(feature = "acme")]
 pub mod dns;
+
+pub use certificate::{Certificate, CertificateResult};
