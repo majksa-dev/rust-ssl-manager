@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.0](https://github.com/majksa-dev/rust-ssl-manager/compare/v0.1.0...v0.2.0) (2024-08-20)
+
+
+### Features
+
+* cloudflare origin ca issued certificates ([635ab09](https://github.com/majksa-dev/rust-ssl-manager/commit/635ab0935ddb768a9e1ead1e042e0b7601f2353d))
+
+
+### Bug Fixes
+
+* main.rs cfg not ([d4f5c6f](https://github.com/majksa-dev/rust-ssl-manager/commit/d4f5c6f8dd86860a1d377e9c454f34c8282b5faa))
+
 ## [0.1.0](https://github.com/majksa-dev/rust-ssl-manager/compare/v0.0.1...v0.1.0) (2024-08-20)
 
 
